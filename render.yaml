@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: spare-me
+    runtime: static
+    buildCommand: "echo no build needed"
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache
+    routes: []
